@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+}
+
+group = 'br.unila'
+version = '0.0.1'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:30.1.1-jre'
+    implementation 'com.taskadapter:redmine-java-api:4.0.0.rc4'
+}
+
+testing {
+    suites {
+        test {
+            useJUnitJupiter('5.8.1')
+        }
+    }
+}
+
+application {
+    mainClass = 'xyz.faustovaz.App'
+}
